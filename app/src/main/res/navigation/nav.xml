@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.gelirgider.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_finalExpensesFragment"
+            app:destination="@id/finalExpensesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalExpensesFragment"
+        android:name="com.example.gelirgider.FinalExpensesFragment"
+        android:label="fragment_final_expenses"
+        tools:layout="@layout/fragment_final_expenses" />
+</navigation>
