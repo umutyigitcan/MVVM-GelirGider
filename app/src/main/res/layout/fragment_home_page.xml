@@ -3,13 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
-        <variable name="homePageFragmentNesnesi" type="com.example.gelirgider.HomePage" />zz
+        <variable name="homePageFragmentNesnesi" type="com.example.gelirgider.HomePage" />
+        <variable name="currentMoneyData" type="String" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#308484"
+    android:background="#586975"
     tools:context=".HomePage">
     <Button
         android:layout_width="50dp"
@@ -45,7 +46,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Güncel Para: "
+        android:text=""
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -71,12 +72,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Borç Bilgisi: "
+        android:text="Toplam Eksilen Bakiye"
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/currentMoney"
+        app:layout_constraintTop_toBottomOf="@id/monthlyIncome"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="20dp"
         android:id="@+id/currentDebt"
@@ -97,12 +98,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aylık Gelir: "
+        android:text="Toplam Artan Bakiye"
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/currentDebt"
+        app:layout_constraintTop_toBottomOf="@id/currentMoney"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="20dp"
         android:id="@+id/monthlyIncome"
@@ -126,8 +127,8 @@
         android:layout_height="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        app:chart_donutBackgroundColor="#308484"
-        app:chart_donutRoundCorners="true"
+        app:chart_donutBackgroundColor="#586975"
+        app:chart_donutRoundCorners="false"
         app:chart_donutThickness="15dp"
         app:chart_donutTotal="100"
         android:layout_marginBottom="60dp"
@@ -161,7 +162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/currentDebtIcon"
-        android:text="Borç Bilgisi"
+        android:text="Toplam Artan Para"
         app:layout_constraintTop_toTopOf="@id/currentDebtIcon"
         app:layout_constraintBottom_toBottomOf="@id/currentDebtIcon"
         android:layout_marginStart="10dp"
@@ -171,7 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/monthlyIncomeIcon"
-        android:text="Aylık Gelir"
+        android:text="Toplam Eksilen Para"
         app:layout_constraintTop_toTopOf="@id/monthlyIncomeIcon"
         app:layout_constraintBottom_toBottomOf="@id/monthlyIncomeIcon"
         android:layout_marginStart="10dp"

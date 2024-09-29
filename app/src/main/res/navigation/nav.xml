@@ -18,5 +18,9 @@
         android:id="@+id/finalExpensesFragment"
         android:name="com.example.gelirgider.FinalExpensesFragment"
         android:label="fragment_final_expenses"
-        tools:layout="@layout/fragment_final_expenses" />
+        tools:layout="@layout/fragment_final_expenses" >
+        <action
+            android:id="@+id/action_finalExpensesFragment_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
 </navigation>
